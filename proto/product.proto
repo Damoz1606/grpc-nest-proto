@@ -21,18 +21,22 @@ message CreateProductResponse {
     int32 id = 3;
 }
 
+message FindOneData {
+  int32 id = 1;
+  string name = 2;
+  string sku = 3;
+  int32 stock = 4;
+  double price = 5;
+}
+
 message FindOneRequest {
-    int32 id = 1;
-    string name = 2;
-    string sku = 3;
-    int32 stock = 4;
-    double price = 5;
+  int32 id = 1;
 }
 
 message FindOneResponse {
-    int32 status = 1;
-    repeated string error = 2;
-    FindOneData data = 3;
+  int32 status = 1;
+  repeated string error = 2;
+  FindOneData data = 3;
 }
 
 message DecreaseStockRequest {
